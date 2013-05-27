@@ -24,6 +24,7 @@ function requiredFieldCheck(editBoxComponent, labelComponent, requiredMessage){
 }
 
 function checkLeapYear (intYear) {
+	//debugger
 	if(intYear % 4 == 0){
 		if(intYear % 100 == 0){
 			if(intYear % 400 == 0){
