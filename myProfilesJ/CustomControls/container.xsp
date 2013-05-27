@@ -21,7 +21,7 @@
 	<xp:panel id="frame" styleClass="frame">
 		<xp:panel id="header" styleClass="header">
 			<xp:panel id="headerInner" styleClass="headerInner">
-				<xp:label id="headerInnerTitle" value="Profiles" styleClass="headerInnerTitle"></xp:label></xp:panel>
+				<xp:label id="headerInnerTitle" value="プロフィール" styleClass="headerInnerTitle"></xp:label></xp:panel>
 		</xp:panel>
 		<xp:panel id="main" styleClass="main">
 			<xp:panel id="tabBar" themeId="TabBar">
