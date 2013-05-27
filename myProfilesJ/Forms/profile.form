@@ -1,13 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='492578A1002389DF'>
-<noteinfo noteid='19e' unid='C9F8274C38B5E700492574DF0033E73B' sequence='16'>
+<noteinfo noteid='19e' unid='C9F8274C38B5E700492574DF0033E73B' sequence='17'>
 <created><datetime>20081011T182655,31+09</datetime></created>
-<modified><datetime>20130527T224932,00+09</datetime></modified>
-<revised><datetime>20130527T224931,99+09</datetime></revised>
-<lastaccessed><datetime>20130527T224932,00+09</datetime></lastaccessed>
+<modified><datetime>20130528T001310,86+09</datetime></modified>
+<revised><datetime>20130528T001310,85+09</datetime></revised>
+<lastaccessed><datetime>20130528T001310,86+09</datetime></lastaccessed>
 <addedtofile><datetime>20110531T152826,54+09</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Admin/O=Lotus</name><name>CN=nd852lab/O=Lotus</name><name
->CN=Admin/O=LotusLab</name></updatedby>
+<updatedby><name>CN=Admin/O=LotusLab</name></updatedby>
 <wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
 <item name='$HTMLCode' sign='true'>
 <rawitemdata type='1'>
@@ -19,7 +18,7 @@ X/8QAAIADwAHAAAAAAAAAA==
 hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
 </rawitemdata></item>
 <item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>8.5.2</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item>
 <item name='$$ScriptName' summary='false' sign='true'><text>profile</text></item>
 <item name='FullName' placeholder='true'>
 <rawitemdata type='0'>
@@ -42,20 +41,24 @@ hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
 <item name='TimeZone' placeholder='true'>
 <rawitemdata type='0'>
 </rawitemdata></item>
-<item name='DOB' summary='false' sign='true'>
+<item name='DOB' summary='false'>
 <rawitemdata type='400'>
 AAAAAAAAAAA=
 </rawitemdata></item>
 <item name='AboutMe' placeholder='true'>
 <rawitemdata type='0'>
 </rawitemdata></item>
-<item name='Date2' summary='false' sign='true'>
+<item name='Date2' summary='false'>
 <rawitemdata type='400'>
 AAAAAAAAAAA=
 </rawitemdata></item>
-<item name='$Fields'><textlist><text>Date2</text><text>AboutMe</text><text
->DOB</text><text>TimeZone</text><text>Country</text><text>Gender</text><text
->Email</text><text>LastName</text><text>FirstName</text><text>FullName</text></textlist></item>
+<item name='LeapYear' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='$Fields'><textlist><text>LeapYear</text><text>Date2</text><text
+>AboutMe</text><text>DOB</text><text>TimeZone</text><text>Country</text><text
+>Gender</text><text>Email</text><text>LastName</text><text>FirstName</text><text
+>FullName</text></textlist></item>
 <item name='$Body' sign='true'>
 <rawitemdata type='1'>
 gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -90,6 +93,9 @@ AAAAAAAAAAAAAAAAAAAAAIr/LACCAAEAAAACAAAAAAAAAgEAAAoAAAAAAAAAAAcAAAAAAEFib3V0
 TWUAYg4BAIQAAAAAAAEAAADeBgAAiv+F/wgAAQAACoECgwQBAIX/CAABAAAK3QYAAIr//v9UAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeAB4AAAAAAAASIABAAAAAAABAgICAQEB
 AQcEAAAAAAAAAAAAAAAAAAAvLyA6iv8qAIoAAAQAMAIAAAAAAAAAAQAACgAAAAAAAAAABQAAAAAA
-RGF0ZTIA3gYAAIr/hf8IAAEAAAo=
+RGF0ZTIA3gYAAIr/hf8IAAEAAAqBAoMEAQCF/wgAAQAACt0GAACK//7/UAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAHgAeAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAiv8sAIoAAAUAMAIAAAAAAAACAQAACgAAAAAAAAAACAAAAAAATGVhcFllYXJiDgEAhAAA
+AAAAAAAAAN4GAACK/4X/CAABAAAK
 </rawitemdata></item></note>
 

@@ -22,3 +22,19 @@ function requiredFieldCheck(editBoxComponent, labelComponent, requiredMessage){
 	}
 	return true;
 }
+
+function checkLeapYear (intYear) {
+	if(intYear % 4 == 0){
+		if(intYear % 100 == 0){
+			if(intYear % 400 == 0){
+				return true;
+			}else{
+				return false;
+			}
+		}else{
+			return true;
+		}
+	}else{
+		return false;
+	}
+}
