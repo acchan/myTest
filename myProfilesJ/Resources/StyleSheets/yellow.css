@@ -1,0 +1,41 @@
+/*
+* © Copyright IBM Corp. 2011
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at:
+* 
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+* implied. See the License for the specific language governing
+* permissions and limitations under the License.
+*/
+
+.textHeaderYellow {
+	color: rgb(200,200,0);
+}
+.buttonCreateYellow {
+	color: rgb(0,0,0);
+	font-weight: normal;
+	height: 1.8em;
+	margin-right: 3px;
+	margin-left: 3px;
+	vertical-align: text-bottom;
+	padding: 0px 3px;
+	border: 1px solid rgb(192,192,192);
+	background: url(./yellowBack.gif) top left repeat-x;
+}
+.bodyYellow {
+	background: rgb(255,255,255) url(./backgroundMainYellow.gif) top left repeat-x;
+	font: normal .75em/1.5em Helvetica, Arial, Verdana, sans-serif;
+}
+.tabBarYellow {
+	background: rgb(255,255,255) url(./backgroundMiniYellow.gif) top left repeat-x;
+	height: 3em;
+	position: relative;
+	border-bottom: 1px solid rgb(224,224,224);
+	z-index:1000;
+}

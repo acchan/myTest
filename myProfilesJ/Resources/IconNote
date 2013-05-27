@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note default='true' class='icon' xmlns='http://www.lotus.com/dxl' version='9.0'
+ replicaid='492578A1002389DF'>
+<noteinfo noteid='11e' unid='56B311CB1581AB9D80257465003F5599' sequence='26'>
+<created><datetime dst='true'>20080611T123146,81+01</datetime></created>
+<modified><datetime>20110622T132749,94+09</datetime></modified>
+<revised><datetime>20110622T132749,93+09</datetime></revised>
+<lastaccessed><datetime>20110622T132749,94+09</datetime></lastaccessed>
+<addedtofile><datetime>20110531T152812,53+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=system/O=xpages</name><name>CN=admin/O=lotus</name><name
+>CN=Atsushi Sato/OU=Japan/O=IBM</name><name>CN=nd852lab/O=Lotus</name></updatedby>
+<item name='IconBitmap' summary='true' sign='true'>
+<rawitemdata type='6'>
+AiAgAQAA///////wD///gAH//gAAf/wAAD/4AAAf8AAAD+AAAAfgAAAHwAAAA8AAAAPAAAADgAAA
+AYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAHAAAADwAAAA8AAAAPgAAAH4AAAB/AAAA/4AAAf
+/AAAP/4AAH//gAH///AP//////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAiIiIiAAAAAAAAAAAAAAI
+jPZmZm/IgAAAAAAAAAAIjGZmZmZmZsiAAAAAAAAAjGZmZmZmZmZmyAAAAAAACMZmZmZmZmZmZmyA
+AAAAAIxmZmZmZmZmZmZmyAAAAAjGZmZmZmZmZmZmZmyAAAAIZmbyL2byL2byL2ZmgAAAjGZmIiJm
+IiJmIiJmZsgAAIZmZiIiZiIiZiIiZmZoAADGZmYiImYiImYiImZmbAAI9mZmIiJmIiJmIiJmZm+A
+CGZmZiIiZiIiZiIiZmZmgAhmZmYiImYiImYiImZmZoAIZmZmIiJmIiJmIiJmZmaACGZvIiIiZiIi
+ZiIiIvZmgAhmYiIiImYiImYiIiImZoAIZm8iIi9m8i9m8iIi9maACPZmZmZmZmZmZmZmZmZvgADG
+ZmbyL2byL2byL2ZmbAAAj2ZmIiJmIiJmIiJmZvgAAIxmZiIiZiIiZiIiZmbIAAAI9mbyL2byL2by
+L2ZvgAAACMZmZmZmZmZmZmZmbIAAAACMZmZmZmZmZmZmZsgAAAAACMZmZmZmZmZmZmyAAAAAAACM
+9mZmZmZmZm/IAAAAAAAACIz2ZmZmZm/IgAAAAAAAAAAIiMZmZmyIgAAAAAAAAAAAAACIiIiIAAAA
+AAAAUEECICABAAD/////+A4DgA==
+</rawitemdata></item>
+<item name='$DefaultXPage' sign='true'><text>home.xsp</text></item>
+<item name='$DBTheme' sign='true'><text>yellowtheme.theme</text></item>
+<item name='$Flags'><text>J7!</text></item>
+<item name='$FlagsNoRefresh' sign='true'><text/></item>
+<item name='$Daos' sign='true'><text>0</text></item>
+<item name='$TITLE'><text>プロフィール</text></item></note>
+

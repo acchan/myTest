@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='492578A1002389DF'>
+<noteinfo noteid='1a2' unid='AB608E2B28740767492574DF004525BB' sequence='9'>
+<created><datetime>20081011T213516,43+09</datetime></created>
+<modified><datetime>20130527T224932,04+09</datetime></modified>
+<revised><datetime>20130527T224932,03+09</datetime></revised>
+<lastaccessed><datetime>20130527T225403,48+09</datetime></lastaccessed>
+<addedtofile><datetime>20110531T152827,03+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=admin/O=lotus</name><name>CN=Atsushi Sato/OU=Japan/O=IBM</name><name
+>CN=Niklas Heidloff/OU=Germany/O=IBM</name><name>CN=Atsushi Sato/OU=Japan/O=IBM</name><name
+>CN=nd852lab/O=Lotus</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>profiles</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+sgACABwACABGdWxsTmFtZQUACABGdWxsTmFtZQMAAgAcAAgAVGltZVpvbmUFAAgAVGltZVpvbmUD
+AAIAGAAFAEVtYWlsAAUABQBFbWFpbAADAAUANAAwAAUACAAIAAUACQAEAEZ1bGxOYW1lVGltZVpv
+bmVFbWFpbCRDb25mbGljdCRSRUYEAAQAAAAeAAUABABGb3JtAQAHAHByb2ZpbGUACgIEAAMABwAK
+AAQACUwxUw==
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+FQABAABECGYAAAAIAEZ1bGxOYW1l
+</rawitemdata></item>
+<item name='$Collation1' summary='true'>
+<rawitemdata type='2'>
+FQABAABECGYAAAAIAEZ1bGxOYW1l
+</rawitemdata></item>
+<item name='$Collation2' summary='true'>
+<rawitemdata type='2'>
+FQABAABECWYAAAAIAEZ1bGxOYW1l
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQADAAMACAAAAFZDAQMIAAgAHgAAAFgAAQAACgABAAAAAAAAAAICAAAAVkMAAAgACAAeAAAA5gAB
+AAAKAAAAAAAAAAAAAgIAAABWQwAABQAFABoAAAB8AAEAAAoAAAAAAAAAAAACAgAAAEZ1bGxOYW1l
+RnVsbE5hbWUeAAIAHAAIAEZ1bGxOYW1lBQAIAEZ1bGxOYW1lAwBUaW1lWm9uZVRpbWVab25lHgAC
+ABwACABUaW1lWm9uZQUACABUaW1lWm9uZQMARW1haWxFbWFpbBoAAgAYAAUARW1haWwABQAFAEVt
+YWlsAAMAJgABAAAAAQEACQEAAAoBAQ4KAAABAK0rAQABAAEAAAAAAAAAAABXQwEBAAkAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAQAJAAAAAAAAAAAAAAAAAAAAAAAA
+BAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAP//AAAA
+AAAAAAAAAAAAAABCAAAAAAABAP///wAFAP///wABAAAAAAAAAAAAAAAAAAEA////AAEA////AAAA
+AQAAAAAAAQAAAAAAAQAAAAAAAAAIAAAAAAABAA==
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>PY</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

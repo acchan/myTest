@@ -1,0 +1,50 @@
+/*
+* © Copyright IBM Corp. 2011
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at:
+* 
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+* implied. See the License for the specific language governing
+* permissions and limitations under the License.
+*/
+
+html, body{padding:0px !important;margin:0px !important;}
+
+body{background:#ffffff url(./backgroundMain.gif) top left repeat-x;font:normal .75em/1.5em Helvetica, Arial, Verdana, sans-serif;}
+	
+.frame{margin:0 15px;padding:0px;min-width:800px;}
+
+.main{background:#ffffff;padding:3px;border-left:1px solid #aaaaaa;border-right:1px solid #aaaaaa;border-bottom:1px solid #aaaaaa;border-top:0px;-moz-border-radius:0px 0px 5px 5px;-webkit-border-radius:0px 0px 5px 5px;overflow:hidden;}
+
+.content{background:#ffffff;padding:16px 10px 20px 15px;overflow:hidden;}
+
+.tabBar{background:#ffffff url(./backgroundMini.gif) top left repeat-x;height:3em;position:relative;border-bottom:1px solid #e0e0e0;z-index:1000;}
+
+.searchInfo{padding:10px;border:1px solid #dedfe1;margin:0px 0px 10px 0px;font-size:1.10em;}
+
+.profilesButtonCommand{color:#ffffff;font-weight:normal;height:1.8em;margin-right:3px;margin-left:3px;vertical-align:text-bottom;padding:0px 3px;border:1px solid #4c94d6;background:url(./buttonBlue.gif) top left repeat-x;}
+.profilesButtonSubmit{color:#000000;font-weight:normal;height:1.8em;margin-right:3px;margin-left:3px;vertical-align:text-bottom;padding:0px 3px;border:1px solid #c0c0c0;background:url(./buttonSilver.gif) top left repeat-x;}
+.profilesButtonCancel{color:#000000;font-weight:normal;height:1.8em;margin-right:3px;margin-left:3px;vertical-align:text-bottom;padding:0px 3px;border:1px solid #c0c0c0;background:url(./buttonSilver.gif) top left repeat-x;}
+		
+.header{background:transparent url(./bannerLeft.gif) bottom left no-repeat;color:#5b3feb;height:47px;padding:0px;text-align:right;}
+
+.headerInner{height:47px;background:transparent url(./bannerRight.gif) bottom right no-repeat;}
+
+.headerInnerTitle{position:relative;float:right;right:30px;color:#444444;font:normal 1.8em/1.7em Helvetica, Arial, Verdana, sans-serif;letter-spacing:0;}
+
+/****************** Day Two *************************/
+
+.friendsPanel{display:inline-block;padding:4px;margin:4px;background-color:#f0f4f9;border:1px solid #c0c0c0;-moz-border-radius:4px;-webkit-border-radius:4px;}
+.friendsPanel:hover{background-color:#ffe96c}
+.friendsName{margin:3px;font-weight:bold;}
+.friendsEmail{margin:3px;}
+.removeFriend{margin:3px;}
+
+.removeFriend:link, .removeFriend:visited{color:#578cca;}
+.removeFriend:hover, .removeFriend:focus{border-bottom-color:#05386b;color:#05386b;border-bottom-style:dotted;border-bottom-width:1px;text-decoration:none;}

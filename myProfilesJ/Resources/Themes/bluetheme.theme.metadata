@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="492578A1002389DF" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1c2" sequence="26" unid="E86946FC949A0AA8492574E500178B2B">
+<created><datetime>20081017T131709,55+09</datetime></created>
+<modified><datetime>20130527T224931,52+09</datetime></modified>
+<revised><datetime>20130527T224931,51+09</datetime></revised>
+<lastaccessed><datetime>20130527T224931,52+09</datetime></lastaccessed>
+<addedtofile><datetime>20110531T152828,97+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=admin/O=lotus</name><name>CN=Atsushi Sato/OU=Japan/O=IBM</name><name>CN=Niklas Heidloff/OU=Germany/O=IBM</name><name>CN=Atsushi Sato/OU=Japan/O=IBM</name><name>CN=Admin/O=Lotus</name><name>CN=nd852lab/O=Lotus</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<item name="$TITLE"><text>bluetheme.theme</text></item>
+<item name="$Flags"><text>34567Cg~`</text></item>
+<item name="$DesignerVersion" sign="true"><text>8.5.2</text></item>
+
+
+<item name="$FileNames" sign="true"><text>bluetheme.theme</text></item>
+<item name="$CSSFiles" sign="true"><text>blue.css</text></item></note>

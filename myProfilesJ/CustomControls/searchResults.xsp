@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+<!-- © Copyright IBM Corp. 2011                                          -->
+<!--                                                                     -->
+<!-- Licensed under the Apache License, Version 2.0 (the "License");     -->
+<!-- you may not use this file except in compliance with the License.    -->
+<!-- You may obtain a copy of the License at:                            -->
+<!--                                                                     -->
+<!-- http://www.apache.org/licenses/LICENSE-2.0                          -->
+<!--                                                                     -->
+<!-- Unless required by applicable law or agreed to in writing, software -->
+<!-- distributed under the License is distributed on an "AS IS" BASIS,   -->
+<!-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or     -->
+<!-- implied. See the License for the specific language governing        -->
+<!-- permissions and limitations under the License.                      -->
+
+	<xp:this.resources>
+		<xp:styleSheet href="/styles.css"></xp:styleSheet>
+	</xp:this.resources>
+	<xp:br></xp:br>
+	<xp:text escape="true" id="resultsComputedField" themeId="SearchCriteria"><xp:this.value><![CDATA[#{javascript:var criteria = sessionScope.nameToSearch;
+var title = "プロフィール検索キーワード: ";
+if(null != criteria && criteria != ""){
+	title += criteria;
+}
+else{
+	title = "すべてのプロフィール";
+}
+return title;}]]></xp:this.value></xp:text>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:viewPanel id="viewPanel1" viewStyle="width:100%" rows="10">
+		<xp:this.facets>
+			<xp:pager layout="Previous Group Next" xp:key="headerPager"
+				id="pager1">
+			</xp:pager>
+		</xp:this.facets>
+		<xp:this.data>
+			<xp:dominoView var="profiles" viewName="profiles"
+				keys="#{javascript:sessionScope.nameToSearch}">
+			</xp:dominoView>
+		</xp:this.data>
+		<xp:viewColumn columnName="FullName" id="viewColumn1" displayAs="link" openDocAsReadonly="true">
+			<xp:viewColumnHeader value="名前（ローマ字）"
+				id="viewColumnHeader1" sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="TimeZone" id="viewColumn2">
+			<xp:viewColumnHeader value="タイムゾーン"
+				id="viewColumnHeader2">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="Email" id="viewColumn3" displayAs="link" openDocAsReadonly="true">
+			<xp:viewColumnHeader value="Email" id="viewColumnHeader3"></xp:viewColumnHeader>
+		</xp:viewColumn>
+	</xp:viewPanel></xp:view>

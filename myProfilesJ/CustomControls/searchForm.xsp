@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+<!-- © Copyright IBM Corp. 2011                                          -->
+<!--                                                                     -->
+<!-- Licensed under the Apache License, Version 2.0 (the "License");     -->
+<!-- you may not use this file except in compliance with the License.    -->
+<!-- You may obtain a copy of the License at:                            -->
+<!--                                                                     -->
+<!-- http://www.apache.org/licenses/LICENSE-2.0                          -->
+<!--                                                                     -->
+<!-- Unless required by applicable law or agreed to in writing, software -->
+<!-- distributed under the License is distributed on an "AS IS" BASIS,   -->
+<!-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or     -->
+<!-- implied. See the License for the specific language governing        -->
+<!-- permissions and limitations under the License.                      -->
+
+	<xp:this.resources>
+		<xp:styleSheet href="/styles.css"></xp:styleSheet>
+		<xp:script src="/clientSide.js" clientSide="true"></xp:script>
+	</xp:this.resources>
+	<xp:button value="新規プロフィール作成" id="button1" tabindex="3"><xp:eventHandler event="onclick" submit="true" refreshMode="complete" immediate="true">
+	<xp:this.action>
+		<xp:openPage name="/profile.xsp" target="newDocument"></xp:openPage>
+	</xp:this.action></xp:eventHandler></xp:button>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:label value="プロフィール検索" id="label1"
+		style="font-size:14pt;font-weight:bold" themeId="Header">
+	</xp:label>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:label value="プロフィール検索をしたい人の名前を入力してください。" id="label2"></xp:label>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:inputText id="nameToSearchEditBox" style="width:250px"
+		value="#{requestScope.nameToSearch}" tabindex="1">
+		<xp:this.validators>
+			
+			
+		</xp:this.validators>
+		<xp:typeAhead mode="partial" minChars="1" ignoreCase="true">
+			<xp:this.valueList><![CDATA[#{javascript:@DbColumn(@DbName(), "profiles", 0)}]]></xp:this.valueList>
+		</xp:typeAhead>
+	<xp:eventHandler event="onkeyup" submit="false"><xp:this.handlers>
+	<xp:handler type="text/javascript">
+		<xp:this.script><![CDATA[if (thisEvent.keyCode == 13) {
+	var element = document.getElementById("#{id:buttonSearch}");
+	element.click();
+}
+]]></xp:this.script>
+	</xp:handler></xp:this.handlers></xp:eventHandler></xp:inputText>
+	<xp:button value="検索" id="buttonSearch" styleClass="profilesButtonCommand" tabindex="2"><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+	<xp:this.action>
+
+		<xp:actionGroup>
+			<xp:executeScript
+				script="#{javascript:sessionScope.nameToSearch=requestScope.nameToSearch}">
+			</xp:executeScript>
+
+			<xp:openPage name="/results.xsp"></xp:openPage>
+		</xp:actionGroup>
+	</xp:this.action><xp:this.handlers>
+	<xp:handler type="text/javascript">
+		<xp:this.script><![CDATA[var errMsg1 = "検索名の入力は必須です。";
+var errMsg2 = "検索名は3文字以上入力してください。";
+var element = document.getElementById("#{id:nameToSearchEditBox}");
+return checkRequired(element, errMsg1) && checkMinLength(element, 3, errMsg2);
+]]></xp:this.script>
+	</xp:handler></xp:this.handlers></xp:eventHandler></xp:button>
+</xp:view>

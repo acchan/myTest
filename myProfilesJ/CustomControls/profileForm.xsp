@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+<!-- © Copyright IBM Corp. 2011                                          -->
+<!--                                                                     -->
+<!-- Licensed under the Apache License, Version 2.0 (the "License");     -->
+<!-- you may not use this file except in compliance with the License.    -->
+<!-- You may obtain a copy of the License at:                            -->
+<!--                                                                     -->
+<!-- http://www.apache.org/licenses/LICENSE-2.0                          -->
+<!--                                                                     -->
+<!-- Unless required by applicable law or agreed to in writing, software -->
+<!-- distributed under the License is distributed on an "AS IS" BASIS,   -->
+<!-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or     -->
+<!-- implied. See the License for the specific language governing        -->
+<!-- permissions and limitations under the License.                      -->
+
+	<xp:this.data>
+		<xp:dominoDocument formName="profile" var="profileDocument"
+			computeWithForm="onsave">
+		</xp:dominoDocument>
+	</xp:this.data>
+	<xp:this.resources>
+		<xp:styleSheet href="/styles.css"></xp:styleSheet>
+		<xp:script src="/serverSide.jss" clientSide="false"></xp:script>
+	</xp:this.resources>
+	<xp:label value="プロフィール情報" id="label1"
+		style="font-size:14pt;font-weight:bold" themeId="Header">
+	</xp:label>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:table>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="姓（ローマ字）:" id="LastName_Label1"
+					for="LastName1">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText value="#{profileDocument.LastName}"
+					id="LastName1" style="width:250px" required="true"
+					disableClientSideValidation="true" accesskey="1">
+					<xp:this.validators>
+						<xp:validateLength minimum="2"
+							message="姓（ローマ字）は最低2文字以上入力してください。">
+						</xp:validateLength>
+						<xp:validateRequired
+							message="姓（ローマ字）を入力してください。">
+						</xp:validateRequired>
+					</xp:this.validators>
+				</xp:inputText>
+				<xp:message id="message1" for="LastName1"></xp:message>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="名（ローマ字）:" id="FirstName_Label1"
+					for="FirstName1">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText value="#{profileDocument.FirstName}"
+					id="FirstName1" style="width:250px" required="true"
+					disableClientSideValidation="true" accesskey="2">
+					<xp:this.validators>
+						<xp:validateRequired
+							message="名（ローマ字）を入力してください。">
+						</xp:validateRequired>
+						<xp:validateLength minimum="2"
+							message="名（ローマ字）は最低2文字以上入力してください。">
+						</xp:validateLength>
+					</xp:this.validators>
+				</xp:inputText>
+				<xp:message id="message2" for="FirstName1"></xp:message>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Email:" id="Email_Label1"
+					for="Email1">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText value="#{profileDocument.Email}"
+					id="emailEditBox" style="width:250px" accesskey="3">
+				</xp:inputText>
+				<xp:label id="emailLabel" style="color:rgb(255,0,0)"></xp:label></xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="性別:" id="Gender_Label1"
+					for="Gender1">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:comboBox value="#{profileDocument.Gender}"
+					id="Gender1" accesskey="4">
+					<xp:selectItem itemLabel="男" itemValue="Male" id="selectItem1"></xp:selectItem>
+					<xp:selectItem itemLabel="女" itemValue="Female" id="selectItem2"></xp:selectItem>
+				</xp:comboBox>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="生年月日:" id="label2"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="inputText1"
+					value="#{profileDocument.DOB}" accesskey="5">
+
+					<xp:this.converter>
+						<xp:convertDateTime type="date"></xp:convertDateTime>
+					</xp:this.converter>
+					<xp:dateTimeHelper id="dateTimeHelper1"></xp:dateTimeHelper>
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="国:" id="Country_Label1"
+					for="Country1">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText value="#{profileDocument.Country}"
+					id="Country1" accesskey="6">
+					<xp:typeAhead mode="partial" minChars="1"
+						ignoreCase="true" id="typeAhead1">
+						<xp:this.valueList><![CDATA[#{javascript:@DbLookup(@DbName(), "keywordLookup", "Countries", "Values")}]]></xp:this.valueList>
+					</xp:typeAhead>
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="タイムゾーン:" id="TimeZone_Label1"
+					for="TimeZone1">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:comboBox value="#{profileDocument.TimeZone}"
+					id="TimeZone1" accesskey="7">
+					<xp:selectItems id="selectItems1">
+						<xp:this.value><![CDATA[${javascript:@DbLookup(@DbName(), "keywordLookup", "TimeZones", "Values")}]]></xp:this.value>
+					</xp:selectItems>
+				</xp:comboBox>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="詳細コメント:" id="AboutMe_Label1"
+					for="AboutMe1">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputRichText value="#{profileDocument.AboutMe}"
+					id="AboutMe1" accesskey="8">
+				</xp:inputRichText>
+			</xp:td>
+		</xp:tr>
+
+
+
+
+
+
+
+		<xp:tr>
+			<xp:td></xp:td>
+			<xp:td></xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td></xp:td>
+			<xp:td>
+				<xp:button value="保存" id="saveButton"
+					rendered="#{javascript:profileDocument.isEditable()}"
+					styleClass="profilesButtonSubmit" accesskey="S">
+					
+				<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+					<xp:this.action>
+						<xp:actionGroup>
+							<xp:this.condition><![CDATA[#{javascript:requiredFieldCheck(
+	getComponent("emailEditBox"),
+	getComponent("emailLabel"),
+	"Emailを入力してください。"
+);
+}]]></xp:this.condition>
+							<xp:saveDocument></xp:saveDocument>
+							<xp:openPage name="/home.xsp"></xp:openPage>
+						</xp:actionGroup>
+					</xp:this.action></xp:eventHandler></xp:button>
+				<xp:button id="deleteButton" value="削除"
+					rendered="#{javascript:!profileDocument.isNewNote()}"
+					styleClass="profilesButtonCommand" accesskey="D">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete" id="eventHandler2">
+						<xp:this.action>
+							<xp:deleteDocument name="/home.xsp"
+								message="本当に削除してよろしいですか？">
+							</xp:deleteDocument>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:button value="キャンセル" id="cancelButton"
+					styleClass="profilesButtonCancel" accesskey="C">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete" immediate="true" save="false" id="eventHandler3">
+						<xp:this.action>
+							<xp:openPage name="/home.xsp"></xp:openPage>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:button value="編集" styleClass="profilesButtonCommand"
+					id="editButton"
+					rendered="#{javascript:!profileDocument.isEditable()}" accesskey="E">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete" id="eventHandler4">
+						<xp:this.action>
+							<xp:changeDocumentMode mode="edit"></xp:changeDocumentMode>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td></xp:td>
+			<xp:td></xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td></xp:td>
+			<xp:td>
+				<xp:messages id="messages1"></xp:messages></xp:td>
+		</xp:tr>
+	</xp:table>
+	<xp:table id="friendsTable" rendered="#{javascript:!profileDocument.isNewNote()}">
+		<xp:tr>
+			<xp:td colspan="2">
+				<xp:label value="友人リスト" id="label3" style="font-weight:bold"></xp:label></xp:td>
+			
+		</xp:tr>
+		<xp:tr>
+			<xp:td></xp:td>
+			<xp:td></xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td></xp:td>
+			<xp:td></xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="名前:" id="label4"></xp:label></xp:td>
+			<xp:td>
+				<xp:inputText id="friendName">
+					<xp:typeAhead mode="partial" minChars="1"
+						ignoreCase="true">
+						<xp:this.valueList><![CDATA[#{javascript:@DbColumn(@DbName(), "profiles", 0)}]]></xp:this.valueList>
+					</xp:typeAhead><xp:eventHandler event="onchange" submit="true" refreshMode="partial" refreshId="friendEmail">
+	<xp:this.action>
+		<xp:executeScript>
+			<xp:this.script><![CDATA[#{javascript:var value = @DbLookup(@DbName(), "profiles", getComponent("friendName").getValue(), "Email");
+if(null != value){
+	var email = getComponent("friendEmail");
+	email.setValue(value);
+}
+}]]></xp:this.script>
+		</xp:executeScript>
+	</xp:this.action></xp:eventHandler></xp:inputText></xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Email:" id="label5"></xp:label></xp:td>
+			<xp:td>
+				<xp:inputText id="friendEmail"></xp:inputText></xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td></xp:td>
+			<xp:td>
+				<xp:button value="友人に追加" id="addFriendbutton">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="partial">
+						<xp:this.action><![CDATA[#{javascript:var newFriendDoc = database.createDocument();
+newFriendDoc.appendItemValue("Form", "friend");
+newFriendDoc.appendItemValue("FriendID", profileDocument.getNoteID());
+newFriendDoc.appendItemValue("Name", getComponent("friendName").getValue());
+newFriendDoc.appendItemValue("Email", getComponent("friendEmail").getValue());
+newFriendDoc.save();
+getComponent("friendName").setValue("");
+getComponent("friendEmail").setValue("");
+}]]></xp:this.action>
+					</xp:eventHandler></xp:button></xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td></xp:td>
+			<xp:td></xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td></xp:td>
+			<xp:td>
+				<xp:panel id="friendsContainer">
+					<xp:repeat id="friendsRepeat" rows="30"
+						var="friendDoc">
+					<xp:panel styleClass="friendsPanel">
+						<xp:this.data>
+							<xp:dominoDocument var="friendDocument"
+								formName="friend" action="openDocument"
+								documentId="#{javascript:friendDoc.getNoteID()}"
+								ignoreRequestParams="true">
+							</xp:dominoDocument>
+						</xp:this.data>
+						<xp:text escape="true" id="computedField1" value="#{friendDocument.Name}" styleClass="friendsName"></xp:text>
+						<xp:br></xp:br>
+						<xp:text escape="true" id="computedField2" styleClass="friendsEmail" value="#{friendDocument.Email}"></xp:text>
+						<xp:br></xp:br>
+						<xp:link escape="true" text="削除" id="removeFriendLink" styleClass="removeFriend"><xp:eventHandler event="onclick" submit="true" refreshMode="complete" immediate="true">
+	<xp:this.action>
+		<xp:executeScript
+			script="#{javascript:friendDocument.getDocument().removePermanently(true)}">
+		</xp:executeScript>
+	</xp:this.action></xp:eventHandler></xp:link></xp:panel>
+					<xp:this.value><![CDATA[#{javascript:if(!profileDocument.isNewNote()){
+	var friendsView = database.getView("friends");
+	return friendsView.getAllDocumentsByKey(profileDocument.getNoteID());
+}}]]></xp:this.value></xp:repeat></xp:panel></xp:td>
+		</xp:tr>
+	</xp:table></xp:view>
