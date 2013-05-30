@@ -208,9 +208,10 @@
 
 
 
+
 							<xp:executeScript>
 								<xp:this.script><![CDATA[#{javascript:var DOB:java.util.Date = getComponent("inputText1").getValue();
-debugger
+//debugger
 var bornYear = DOB.getYear();
 if (checkLeapYear(bornYear) == true){
 	print ("うるう年生まれです！");
