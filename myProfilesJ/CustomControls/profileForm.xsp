@@ -209,9 +209,10 @@
 
 
 
+
 							<xp:executeScript>
 								<xp:this.script><![CDATA[#{javascript:var DOB:java.util.Date = getComponent("inputText1").getValue();
-//debugger
+debugger
 var bornYear = DOB.getYear();
 if (checkLeapYear(bornYear) == true){
 	print ("うるう年生まれです！");
@@ -222,6 +223,7 @@ if (checkLeapYear(bornYear) == true){
 							</xp:executeScript>
 							<xp:saveDocument></xp:saveDocument>
 							<xp:openPage name="/home.xsp"></xp:openPage>
+
 
 						</xp:actionGroup>
 					</xp:this.action></xp:eventHandler></xp:button>
@@ -256,7 +258,56 @@ if (checkLeapYear(bornYear) == true){
 						</xp:this.action>
 					</xp:eventHandler>
 				</xp:button>
-			</xp:td>
+			<xp:button value="Mail Send" id="button1" rendered="#{javascript:!profileDocument.isEditable()}" styleClass="profilesButtonSubmit" accesskey="S">
+					
+				<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+					<xp:this.action>
+						<xp:actionGroup>
+							<xp:this.condition><![CDATA[#{javascript:requiredFieldCheck(
+	getComponent("emailEditBox"),
+	getComponent("emailLabel"),
+	"Emailを入力してください。"
+);
+}]]></xp:this.condition>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							<xp:sendMail to="Admin/LotusLab"
+								subject="Profile has been created"
+								bodyHtml="Profile has been created"
+								bodyPlain="Profile has been created"
+								htmlUrl="#{javascript:return context.getUrl();}">
+								<xp:this.from><![CDATA[#{javascript:getComponent("Email");}]]></xp:this.from>
+							</xp:sendMail>
+						</xp:actionGroup>
+					</xp:this.action></xp:eventHandler></xp:button></xp:td>
 		</xp:tr>
 		<xp:tr>
 			<xp:td></xp:td>
