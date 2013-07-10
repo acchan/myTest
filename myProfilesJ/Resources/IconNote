@@ -1,14 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
 <note default='true' class='icon' xmlns='http://www.lotus.com/dxl' version='9.0'
  replicaid='492578A1002389DF'>
-<noteinfo noteid='11e' unid='56B311CB1581AB9D80257465003F5599' sequence='26'>
+<noteinfo noteid='11e' unid='56B311CB1581AB9D80257465003F5599' sequence='27'>
 <created><datetime dst='true'>20080611T123146,81+01</datetime></created>
-<modified><datetime>20110622T132749,94+09</datetime></modified>
-<revised><datetime>20110622T132749,93+09</datetime></revised>
-<lastaccessed><datetime>20110622T132749,94+09</datetime></lastaccessed>
+<modified><datetime>20130607T141246,00+09</datetime></modified>
+<revised><datetime>20130607T141245,99+09</datetime></revised>
+<lastaccessed><datetime>20130607T141246,00+09</datetime></lastaccessed>
 <addedtofile><datetime>20110531T152812,53+09</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=system/O=xpages</name><name>CN=admin/O=lotus</name><name
->CN=Atsushi Sato/OU=Japan/O=IBM</name><name>CN=nd852lab/O=Lotus</name></updatedby>
+<updatedby><name>CN=Admin/O=LotusLab</name></updatedby>
 <item name='IconBitmap' summary='true' sign='true'>
 <rawitemdata type='6'>
 AiAgAQAA///////wD///gAH//gAAf/wAAD/4AAAf8AAAD+AAAAfgAAAHwAAAA8AAAAPAAAADgAAA
